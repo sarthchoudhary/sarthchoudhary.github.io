@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <script>
-        function show(shown, hidden) {
-            document.getElementById(shown).style.display = 'block';
-            document.getElementById(hidden).style.display = 'none';
-            return false;
-        }
-    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarthak Choudhary - Astroparticle Physicist</title>
@@ -72,6 +65,7 @@
         }
         .active {
             display: block;
+        }
     </style>
 </head>
 <body>
@@ -113,7 +107,15 @@
             </div>
             <div id= "Page2" class="page">
                 <h2>Contact</h2>
-                <p><a href="mailto:sarth8d314+io2024@gmail.com">Email</a></p>
+                <p class="email">
+                    <span onclick="toggleEmail()">
+                      <a href="#">Show E-mail</a>
+                    </span>
+                    <span id="email" style="display:none">
+                      <a href="mailto:sarth8d314+io2024@gmail.com">Email link</a>
+                    </span>
+                </p>
+                <!-- <p><a href="mailto:sarth8d314+io2024@gmail.com">Email</a></p> -->
                 <p><a href="https://www.linkedin.com/in/sarthchoudhary/" target="_blank">LinkedIn</a></p>
                 <p><a href="https://github.com/sarthchoudhary/" target="_blank">GitHub</a></p>
                 <br><br>
@@ -126,6 +128,16 @@
             pages.forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
         }
+</script>
+<script>
+    function toggleEmail() {
+      var x = document.getElementById('email');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
 </script>
 </body>
 </html>
