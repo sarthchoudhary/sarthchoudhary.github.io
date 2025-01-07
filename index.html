@@ -52,6 +52,23 @@
             text-align: right; /* Aligns the image to the left */
             margin-top: -175px; /* Adds some space between the cover image and your picture */
         }
+        .profile-link {
+            /* display: flex; */
+            align-items: center;
+            position: absolute; 
+            top: 477px;
+            left: 1045px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #007BBF;
+            /* font-weight: bold; */
+        }
+        .favicon {
+            width: 100px;
+            /* height: 20px; */
+            height: auto;
+            margin-right: 8px;
+        }
         .center {
             /* line-height: 200px; */
             /* height: 200px; */
@@ -112,9 +129,16 @@
         <div class="content">
             <div class="cover-image"></div>
             <div class="display-picture-container">
-                <img src="images/Sarthak_Warsaw.jpg" alt="Sarthak Choudhary" style="width: 195px; height: auto; border-radius: 50%; 
-                border: 3px solid #007BBF; object-fit: cover;">
-            </div>
+                <img src="images/Sarthak_Warsaw.jpg" alt="Sarthak Choudhary" 
+                style="width: 195px; height: auto; border-radius: 50%; 
+                border: 3px solid #007BBF; object-fit: cover; margin-bottom: 10px;">
+            <a href="https://astrocent.camk.edu.pl/?team=sarthak-choudhary" 
+            class="profile-link" target="_blank"> 
+            <!-- <img src="images/ACNT.ico" class="favicon" alt="Favicon"> -->
+            <img src="images/Astrocent_logo.png" class="favicon" alt="Favicon">
+            <!-- Company website -->
+            </a>
+        </div>
             <h1>Sarthak Choudhary</h1>
             <hr width="100%" size="3" color="black">
             <div id= "Page0" class="active page">
