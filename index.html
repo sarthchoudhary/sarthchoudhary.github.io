@@ -11,6 +11,8 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            min-width: 780px;
+            max-width: 1280px;
             /* font-family: Arial, sans-serif; */
             /* font-family: Georgia, 'Times New Roman', Times, serif; */
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,6 +99,8 @@
         }
         .active {
             display: block;
+            /* min-width: 400px;
+            max-width: 900px; */
         }
         .page ul {
             list-style-type: square;
@@ -174,7 +178,7 @@
             <div id= "Page1" class="active page">
                 <!-- <h2>Research Projects</h2> -->
                 <h2>Reseach Experience</h2>
-                <p>
+                <p style="text-align: justify;">
                     I have worked in the domain of astroparticle physics, specifically contributing to the search for dark matter using liquid argon detectors. I was involved in the development and validation of a <a href="https://events.camk.edu.pl/event/47/contributions/317/" target="_blank">PyTorch-based Monte Carlo Pulse Shape Discrimination (PSD) code for the DEAP-3600 experiment</a>. Additionally, I contributed to the <a href="#Page7" onclick="showPage('Page7');">characterisation of polymeric wavelength shifters</a> for future liquid argon detectors.
 
                     <a href="https://indico.cern.ch/event/1390649/contributions/6061505/" target="_blank">I characterised and calibrated a custom gas argon setup (ArGSet)</a> for the characterisation of polymeric wavelength shifters for DarkSide-20k veto detector, which is currently under construction. I calibrated silicon photomultipliers used in ArGSet, developed an algorithm to reject noisy events, and created tools for data analysis.
