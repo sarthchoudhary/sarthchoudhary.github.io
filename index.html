@@ -43,6 +43,38 @@
             font-weight: bold;
             color: rgb(255, 255, 255);
         }
+        .collapsible {
+            background-color: #004466;
+            color: white;
+            cursor: pointer;
+            padding: 14px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapsible:hover {
+            background-color: #006699;
+        }
+        .edu-item {
+           margin-bottom: 10px;
+        }
+        .collapsed-content {
+            padding: 0 16px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #f1f1f1;
+            border-radius: 0 0 8px 8px;
+        }
+        .collapsed-content p {
+            margin: 12px 0;
+        }
         .content {
             flex: 1;
             padding: 20px;
@@ -134,7 +166,7 @@
                 <li> </li><br> <!-- Provides a line break -->
                 <li><a href="https://sarthchoudhary.github.io/">Home</a></li> <br>
                 <!-- <li><a href="#Page1" onclick="showPage('Page1');">Research</a></li> <br> -->
-                <li><a href="data/Choudhary_CV.pdf"> CV </a></li> <br>
+                <li><a href="data/Choudhary_CV.pdf" target="_blank"> CV </a></li> <br>
                 <li><a href="#Page5" onclick="showPage('Page5');">Education</a></li> <br>
                 <li><a href="#Page3" onclick="showPage('Page3');">Publications</a></li> <br>
                 <li><a href="#Page4" onclick="showPage('Page4');">Workshops</a></li> <br>
@@ -157,7 +189,7 @@
             <!-- <img src="images/Astrocent_logo.png" class="favicon" alt="Favicon"> -->
             <!-- <span style="color:#0D4093; font-size:28">/sarthak</span> -->
             </a>
-        </div>
+            </div>
             <h1>Sarthak Choudhary</h1>
             <hr width="100%" size="3" color="black">
             <div id= "Page0" class="active page">
@@ -171,15 +203,6 @@
                     This blend of experimental and computational work keeps me constantly engaged with the challenges and innovations in experimental physics. -->
                 </p>
 
-                <!-- <h2>Education</h2>
-                <ul>
-                    <li><p>PhD: Astroparticle Physics (2021-2015)<br>
-                        AstroCeNT, Nicolaus Copernicus Astronomical Center of Polish Academy of Sciences, Warsaw, Poland</p></li>
-                    <li><p>MTech: Astronomical Instrumentation (2017-2019)<br>
-                        Indian Institute of Astrophysics, Bengaluru | University of Calcutta, Kolkata, India</p></li>
-                    <li><p>BTech: Electronics, Instrumentation, and Control (2012-2016)<br>
-                        J.C. Bose University of Science and Technology, Faridabad, India</p></li>
-                </ul> -->
             </div>
             <div id= "Page1" class="active page">
                 <!-- <h2>Research Projects</h2> -->
@@ -227,7 +250,7 @@
                     <li><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2156/1/012236/meta" target="_blank">The optical simulation model of the DarkSide-20k Veto detector.</a></li><br>
                     <li><a href="https://link.springer.com/article/10.1140/epjc/s10052-021-09870-7" target="_blank">Direct comparison of PEN and TPB wavelength shifters in a liquid argon detector.</a></li><br>
                     <li><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241117934G/abstract" target="_blank">Demonstration of the light collection stability of a PEN-based wavelength shifting reflector in a tonne scale liquid argon detector.</a></li><br>
-                    <br><br>
+                    <br>
                 </ul>
                 For complete list checkout my <a href="https://orcid.org/0000-0002-8298-6779" target="_blank">ORCiD</a> page.
             </div>
@@ -280,27 +303,43 @@
                     </ul>
             </div>
             <div id="Page5" class="page">
-                <!-- <h2>Certificates</h2>
-                <ul>
-                    <li><a href="data/hackerrank_python.pdf" target="_blank"> Python </a></li> <br>
-                    <li><a href="data/hackerrank_problem_solving.pdf" target="_blank"> Problem Solving </a></li> <br>
-                    <li><a href="data/Coursera_Machine_Learning.pdf" target="_blank"> Machine Learning </a></li> <br>
-                    <li><a href="https://www.kaggle.com/learn/certification/sarthchoudhary/data-cleaning" target="_blank"> Data Cleaning </a></li> <br>
-                </ul> -->
                 <h2>Education</h2>
+                <div class="edu-item">
+                    <button class="collapsible">PhD: Experimental Astroparticle Physics</button>
+                    <div class="collapsed-content">
+                        <p><a href="https://camk.edu.pl/en/" target="_blank">Nicolaus Copernicus Astronomical Center of the Polish Academy of Sciences</a> </p>
+                        <!-- <br> -->
+                        <span style="color:grey"> January 2021 - June 2025</span>
+                        <p><i>Thesis</i>: Optimisation of light collection in liquid argon detectors and modelling pulse shape
+discrimination for dark matter searches.<br>
+                            <a href="http://dx.doi.org/10.13140/RG.2.2.15715.87840" style="color:#96122E" target="_blank">Link to PDF</a></p>
+                        <!-- <p>
+                            Focus on liquid argon detectors.</p> -->
+                    </div>
+                </div>
+                <div class="edu-item">
+                        <button class="collapsible">MTech: Astronomical Instrumentation</button>
+                        <div class="collapsed-content">
+                        <p><a href="https://www.iiap.res.in/" target="_blank">Indian Institute of Astrophysics</a> | <a href="https://www.caluniv.ac.in/academic/App_optics_photonics.html" target="_blank"> University of Calcutta</a> </p>
+                        <!-- <br> -->
+                        <span style="color:grey"> June 2017 - July 2019</span>
+                        <p><i>Dissertation</i>: Study and design of a soft X-ray imager and spectrometer for observation
+of non-flaring Sun.<br>
+                        <a href="http://dx.doi.org/10.13140/RG.2.2.26734.01607" style="color:#96122E" target="_blank">Link to PDF</a></p>
+                </div>
+                </div>
+                <div class="edu-item">
+                        <button class="collapsible">BTech: Electronics, Instrumentation, and Control</button>
+                        <div class="collapsed-content">
+                        <p><a href="https://www.jcboseust.ac.in/" target="_blank">J.C. Bose University of Science and Technology</a></p>
+                        <span style="color:grey"> May 2012 - May 2016</span>
+                        </div>
+                </div>
+                <h2>Certifications</h2>
                 <ul>
-                    <li><p>PhD: Experimental Astroparticle Physics (2021-2015)<br>
-                        Astrocent, Nicolaus Copernicus Astronomical Center of the Polish Academy of Sciences, Warsaw, Poland</p></li>
-                    <li><p>MTech: Astronomical Instrumentation (2017-2019)<br>
-                        Indian Institute of Astrophysics, Bengaluru | University of Calcutta, Kolkata, India</p></li>
-                    <li><p>BTech: Electronics, Instrumentation, and Control (2012-2016)<br>
-                        J.C. Bose University of Science and Technology, Faridabad, India</p></li>
-                </ul>
-                <h2>Certificates</h2>
-                <ul>
+                    <li><a href="data/Coursera_Machine_Learning.pdf" target="_blank"> Machine Learning Specialization </a></li> <br>
                     <li><a href="data/hackerrank_python.pdf" target="_blank"> Python </a></li> <br>
                     <li><a href="data/hackerrank_problem_solving.pdf" target="_blank"> Problem Solving </a></li> <br>
-                    <li><a href="data/Coursera_Machine_Learning.pdf" target="_blank"> Machine Learning </a></li> <br>
                     <li><a href="https://www.kaggle.com/learn/certification/sarthchoudhary/data-cleaning" target="_blank"> Data Cleaning </a></li> <br>
                 </ul>
             </div>
@@ -369,6 +408,22 @@
         x.style.display = 'none';
       }
     }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const coll = document.querySelectorAll(".collapsible");
+    coll.forEach(btn => {
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  });
 </script>
 </body>
 </html>
