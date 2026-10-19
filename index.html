@@ -140,6 +140,40 @@
         .page a {
             text-decoration: none;
         }
+        .diy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            align-items: start;
+            margin: 0 0 24px;
+        }
+        .diy-card {
+            margin: 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+        .diy-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .diy-card figcaption {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .diy-video {
+            max-width: 640px;
+        }
+        .diy-video iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            border-radius: 4px;
+        }
         footer {
             background-color: gray;
             padding: 1px;
@@ -263,40 +297,24 @@
                 <a href="https://flickr.com/photos/sarth/albums/72177720318447774" target="_blank"> See more photos here.</a>
                 <br><br>
                 <h3>DIY Equipment</h3>
-                <ul>
-                    <li>
-                        <p>
-                            <b>DIY clip-on solar filter</b>
-                            <br><br>
-                            <img src='images/DIY_solar_filter.jpg' width="378" height="320" title="DIY clip-on solar filter">
-                            <br>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <b>Camera with the clip-on solar filter</b>
-                            <br><br>
-                            <img src='images/camera_plus_filter.jpg' width="400" height="300" title="Camera plus clip on filter">
-                            <br>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <b>Picture of Sun taken with above equipment</b>
-                            <br><br>
-                            <img src='images/June2024_SunSpot.jpg' width="360" height="530" title="Sun Spots June 2024">
-                            <br>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <b>5 DOF Robotic Arm</b>
-                            <br><br>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lfCAi9-HhZ0?si=pAbUuU4NPdYUz0cT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <br>
-                        </p>
-                    </li>
-                </ul>
+                <div class="diy-grid">
+                    <figure class="diy-card">
+                        <img src="images/DIY_solar_filter.jpg" width="378" height="320" alt="DIY clip-on solar filter" title="DIY clip-on solar filter">
+                        <figcaption>DIY clip-on solar filter</figcaption>
+                    </figure>
+                    <figure class="diy-card">
+                        <img src="images/camera_plus_filter.jpg" width="400" height="300" alt="Camera with the clip-on solar filter" title="Camera plus clip on filter">
+                        <figcaption>Camera with the clip-on solar filter</figcaption>
+                    </figure>
+                    <figure class="diy-card">
+                        <img src="images/June2024_SunSpot.jpg" width="360" height="530" alt="Sunspots, June 2024" title="Sun Spots June 2024">
+                        <figcaption>Picture of Sun taken with above equipment</figcaption>
+                    </figure>
+                </div>
+                <figure class="diy-card diy-video">
+                    <iframe src="https://www.youtube.com/embed/lfCAi9-HhZ0?si=pAbUuU4NPdYUz0cT" title="5 DOF Robotic Arm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>5 DOF Robotic Arm</figcaption>
+                </figure>
             </div>
             <div id= "Page4" class="page">
                 <h2>Schools</h2>
